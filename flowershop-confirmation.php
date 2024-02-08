@@ -5,6 +5,10 @@ $nav_home_class = '';
 $nav_citations_class = '';
 $nav_cooking_class = '';
 $nav_flowershop_class = 'active_page';
+
+$form_name = $_POST["name"]; // untrusted
+$form_phone = $_POST["phone"]; // untrusted
+$form_bouquet = $_POST["bouquet"]; // untrusted
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,13 +28,13 @@ $nav_flowershop_class = 'active_page';
 
     <dl>
       <dt>Business Name</dt>
-      <dd><!-- TODO: output business name --></dd>
+      <dd><?php echo htmlspecialchars($form_name); ?></dd>
 
       <dt>Contact Phone</dt>
-      <dd><!-- TODO: output contact phone number --></dd>
+      <dd><?php echo htmlspecialchars($form_phone); ?></dd>
 
       <dt>Bouquet</dt>
-      <dd><!-- TODO: output bouquet type --></dd>
+      <dd><?php echo htmlspecialchars($form_bouquet); ?></dd>
     </dl>
 
   </main>
